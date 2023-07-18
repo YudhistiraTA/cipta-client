@@ -3,7 +3,7 @@ import GiphySvg from "../components/GiphySvg";
 
 export default function HomePage() {
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen space-y-5">
+		<div className="flex flex-col items-center justify-center min-h-screen space-y-5 p-10">
 			<h1 className="text-4xl font-bold text-neutral-700 mb-5">
 				WELCOME TO YOUR GIPHY
 			</h1>

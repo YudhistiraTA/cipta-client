@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import IronmanPage from "../pages/IronmanPage";
+import SearchPage from "../pages/SearchPage";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/search",
-		element: <p>Search Giphy</p>
+		element: <SearchPage/>
 	},
 	{
 		path: "*",
