@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage";
+import IronmanPage from "../pages/IronmanPage";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -7,7 +8,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/ironman",
-		element: <p>Ironman Giphy</p>
+		element: <IronmanPage/>
 	},
 	{
 		path: "/search",
