@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import GifList from "../components/GifList";
+import GridLoader from "react-spinners/GridLoader";
 
 export default function IronmanPage() {
 	const [gifs, setGifs] = useState();
@@ -22,13 +23,16 @@ export default function IronmanPage() {
 			setLoading(false);
 		})();
 	}, []);
-	if (loading) return <p>loading...</p>;
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen space-y-5">
 			<h1 className="text-4xl font-bold text-neutral-700 mb-5">
 				IRON MAN GIPHY
 			</h1>
-			<GifList gifs={gifs} />
+			{loading ? (
+				<GridLoader color="rgba(121, 202, 255, 0.92)" size={64} />
+			) : (
+				<GifList gifs={gifs} />
+			)}
 		</div>
 	);
 }
